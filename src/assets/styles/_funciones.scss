@@ -1,0 +1,11 @@
+// Convierte px a rem
+@function to-rem($px, $base: 16) {
+  @return ($px / $base) * 1rem;
+}
+
+// Tipografía fluida con clamp
+@function fluid($min, $max, $minVw: 320, $maxVw: 1280) {
+  $slope: ($max - $min) / ($maxVw - $minVw);
+  $intercept: $min - $slope * $minVw;
+  @return clamp(#{$min}, #{$intercept}px + #{$slope} * 1vw, #{$max});
+}

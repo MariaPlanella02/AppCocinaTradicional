@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
+    <title>AppCocinaTradicional</title>
+  </head>
+  <body>
+    <include src="./views/header.html"></include>
+    
+    <main class="gallery">
+      <h1 class="gallery__title">Galería Interactiva</h1>
+      <section class="gallery__grid">
+        <!-- Item 1 -->
+        <figure class="gallery__item">
+          <img src="assets/images/logo.png" alt="Plato tradicional 1" 
+               class="gallery__photo"
+               data-bs-toggle="modal" data-bs-target="#galleryModal1" />
+          <figcaption class="gallery__caption">Plato tradicional 1</figcaption>
+        </figure>
+        <!-- Item 2 -->
+        <figure class="gallery__item">
+          <img src="assets/images/logo.png" alt="Plato tradicional 2" 
+               class="gallery__photo"
+               data-bs-toggle="modal" data-bs-target="#galleryModal2" />
+          <figcaption class="gallery__caption">Plato tradicional 2</figcaption>
+        </figure>
+        <!-- Item 3 -->
+        <figure class="gallery__item">
+          <img src="assets/images/logo.png" alt="Plato tradicional 3" 
+               class="gallery__photo"
+               data-bs-toggle="modal" data-bs-target="#galleryModal3" />
+          <figcaption class="gallery__caption">Plato tradicional 3</figcaption>
+        </figure>
+        <!-- Item 4 -->
+        <figure class="gallery__item">
+          <img src="assets/images/logo.png" alt="Plato tradicional 4" 
+               class="gallery__photo"
+               data-bs-toggle="modal" data-bs-target="#galleryModal4" />
+          <figcaption class="gallery__caption">Plato tradicional 4</figcaption>
+        </figure>
+        <!-- Item 5 -->
+        <figure class="gallery__item">
+          <img src="assets/images/logo.png" alt="Plato tradicional 5" 
+               class="gallery__photo"
+               data-bs-toggle="modal" data-bs-target="#galleryModal5" />
+          <figcaption class="gallery__caption">Plato tradicional 5</figcaption>
+        </figure>
+        <!-- Item 6 -->
+        <figure class="gallery__item">
+          <img src="assets/images/logo.png" alt="Plato tradicional 6" 
+               class="gallery__photo"
+               data-bs-toggle="modal" data-bs-target="#galleryModal6" />
+          <figcaption class="gallery__caption">Plato tradicional 6</figcaption>
+        </figure>
+      </section>
+
+      <!-- Modals -->
+      <div class="modal fade" id="galleryModal1" tabindex="-1" aria-labelledby="galleryModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="galleryModalLabel1">Plato tradicional 1</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+              <img src="assets/images/logo.png" alt="Plato tradicional 1" class="img-fluid rounded" />
+              <p class="mt-3">Descripción ampliada del plato tradicional 1.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="galleryModal2" tabindex="-1" aria-labelledby="galleryModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="galleryModalLabel2">Plato tradicional 2</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+              <img src="assets/images/logo.png" alt="Plato tradicional 2" class="img-fluid rounded" />
+              <p class="mt-3">Descripción ampliada del plato tradicional 2.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="galleryModal3" tabindex="-1" aria-labelledby="galleryModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="galleryModalLabel3">Plato tradicional 3</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+              <img src="assets/images/logo.png" alt="Plato tradicional 3" class="img-fluid rounded" />
+              <p class="mt-3">Descripción ampliada del plato tradicional 3.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="galleryModal4" tabindex="-1" aria-labelledby="galleryModalLabel4" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="galleryModalLabel4">Plato tradicional 4</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+              <img src="assets/images/logo.png" alt="Plato tradicional 4" class="img-fluid rounded" />
+              <p class="mt-3">Descripción ampliada del plato tradicional 4.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="galleryModal5" tabindex="-1" aria-labelledby="galleryModalLabel5" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="galleryModalLabel5">Plato tradicional 5</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+              <img src="assets/images/logo.png" alt="Plato tradicional 5" class="img-fluid rounded" />
+              <p class="mt-3">Descripción ampliada del plato tradicional 5.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="galleryModal6" tabindex="-1" aria-labelledby="galleryModalLabel6" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="galleryModalLabel6">Plato tradicional 6</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+              <img src="assets/images/logo.png" alt="Plato tradicional 6" class="img-fluid rounded" />
+              <p class="mt-3">Descripción ampliada del plato tradicional 6.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <include src="./views/footer.html"></include>
+
+    <script type="module" src="./assets/scripts/main.js"></script>
+  </body>
+</html>

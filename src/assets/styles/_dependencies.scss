@@ -1,0 +1,18 @@
+/**
+ * Import any npm dependencies in this file
+ * see commented examples below
+ */
+
+// Personalización Bootstrap
+$primary: oklch(65% .12 50);
+$body-font-family: 'Inter', system-ui, sans-serif;
+$border-radius: .6rem;
+
+@use "bootstrap/scss/bootstrap";
+
+// Font Awesome SCSS
+@use "@fortawesome/fontawesome-free/scss/fontawesome";
+@use "@fortawesome/fontawesome-free/scss/brands";
+@use "@fortawesome/fontawesome-free/scss/solid";
+@use "@fortawesome/fontawesome-free/scss/regular";
+

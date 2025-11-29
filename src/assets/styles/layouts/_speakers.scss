@@ -1,0 +1,45 @@
+@use "../variables" as vars;
+@use "../funciones" as fn;
+
+.speakers {
+  padding: vars.$space-4 fn.to-rem(32);
+  background-color: var(--paper);
+  color: var(--ink);
+  text-align: center;
+}
+
+.speakers__title {
+  font-size: fn.fluid(28px, 40px);
+  font-weight: 700;
+  margin-bottom: vars.$space-4;
+}
+
+.speakers__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: vars.$space-4;
+}
+
+.speakers__item {
+  flex: 1 1 calc(33.333% - vars.$space-4);
+  max-width: calc(33.333% - vars.$space-4);
+  border-radius: fn.to-rem(8);
+  box-shadow: 0 fn.to-rem(2) fn.to-rem(6) rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+
+.speakers__image {
+  border-top-left-radius: fn.to-rem(8);
+  border-top-right-radius: fn.to-rem(8);
+}
+
+.speakers__caption {
+  font-size: fn.fluid(16px, 20px);
+  font-style: italic;
+  color: var(--ink);
+}

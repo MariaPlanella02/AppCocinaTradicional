@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
+    <title>AppCocinaTradicional</title>
+  </head>
+  <body>
+    <include src="./views/header.html"></include>
+    
+    <main class="hero container-fluid">
+      <div class="hero__grid row">
+        <div class="hero__content col-12 col-md-6 d-flex flex-column justify-content-center align-items-start">
+          <h1 class="hero__title">Name or catchy phrase here</h1>
+          <p class="hero__description">
+            This will be a creative front page poster made with CSS Grid. Maybe include links here?
+          </p>
+          <a href="#" class="hero__cta btn btn-primary">
+            <i class="fa-solid fa-arrow-right"></i> Discover More
+          </a>
+        </div>
+        <div class="hero__visual col-12 col-md-6 d-flex justify-content-center align-items-center">
+          <i class="fa-solid fa-utensils hero__icon"></i>
+        </div>
+      </div>
+    </main>
+
+
+    <include src="./views/footer.html"></include>
+
+    <script type="module" src="./assets/scripts/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+@use "../variables" as vars;
+@use "../funciones" as fn;
+
+.footer {
+  background-color: var(--paper);
+  padding: vars.$space-3 fn.to-rem(32);
+  color: var(--ink);
+}
+
+.footer__info {
+  text-align: center;
+  margin-bottom: vars.$space-3;
+}
+
+.footer__info-text {
+  font-size: fn.fluid(16px, 20px);
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+.footer__divider {
+  border: none;
+  border-top: fn.to-rem(2) solid var(--border);
+  margin: vars.$space-3 0;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__logo-link {
+  display: inline-block;
+}
+
+.footer__logo-image {
+  width: fn.to-rem(120);
+  height: auto;
+}
+
+.footer__nav {
+  display: flex;
+  gap: vars.$space-3;
+}
+
+.footer__nav-link {
+  text-decoration: none;
+  color: var(--ink);
+  font-size: fn.fluid(20px, 28px);
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: fn.to-rem(-4);
+    left: 0;
+    width: 0%;
+    height: fn.to-rem(2);
+    background-color: var(--brand);
+    transition: width 0.3s ease;
+  }
+
+  &:hover {
+    color: var(--brand);
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+.footer__social {
+  display: flex;
+  gap: vars.$space-2;
+}
+
+.footer__social-link {
+  color: var(--ink);
+  font-size: fn.to-rem(28);
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--brand);
+  }
+}
