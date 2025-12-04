@@ -37,6 +37,9 @@
 }
 
 .speakers__image {
+  width: 100%;
+  height: 500px; 
+  object-fit: cover;
   border-top-left-radius: fn.to-rem(8);
   border-top-right-radius: fn.to-rem(8);
 }
@@ -45,4 +48,17 @@
   font-size: fn.fluid(16px, 20px);
   font-style: italic;
   color: var(--ink); 
+}
+
+@media (max-width: 600px) {
+    .speakers__item {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+
+    .speakers__image {
+      height: 300px;    
+      object-fit: cover;  
+    }
+
 }

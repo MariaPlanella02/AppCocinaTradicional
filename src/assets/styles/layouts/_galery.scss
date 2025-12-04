@@ -60,6 +60,21 @@
 }
 
 @layer overrides {
+
+  @container gallery (max-width: 600px) {
+    .gallery__item {
+      flex: 1 1 100%;       
+      max-width: 100%;      
+    }
+  }
+
+  @media (max-width: 600px) {
+    .gallery__photo {
+      height: 150px;    
+      object-fit: cover;  
+    }
+  }
+
   .gallery__item:has(img:hover) {
     outline: fn.to-rem(3) solid var(--accent); 
   }
