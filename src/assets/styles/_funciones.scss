@@ -7,5 +7,5 @@
 @function fluid($min, $max, $minVw: 320, $maxVw: 1280) {
   $slope: ($max - $min) / ($maxVw - $minVw);
   $intercept: $min - $slope * $minVw;
-  @return clamp(#{$min}, #{$intercept}px + #{$slope} * 1vw, #{$max});
+  @return clamp(#{$min}px, #{$intercept}px + #{$slope}vw, #{$max}px);
 }

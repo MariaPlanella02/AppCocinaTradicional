@@ -2,25 +2,26 @@
 @use "../funciones" as fn;
 
 .footer {
-  background-color: var(--paper);
+  background-color: var(--transparent); 
   padding: vars.$space-3 fn.to-rem(32);
-  color: var(--ink);
+  color: var(--ink); 
 }
 
 .footer__info {
-  text-align: center;
   margin-bottom: vars.$space-3;
 }
 
 .footer__info-text {
-  font-size: fn.fluid(16px, 20px);
-  line-height: 1.5;
+  font-size: fn.to-rem(14);
+  line-height: 1.2;
   color: var(--ink);
+  margin: fn.to-rem(3) 0;
 }
+
 
 .footer__divider {
   border: none;
-  border-top: fn.to-rem(2) solid var(--border);
+  border-top: fn.to-rem(2) solid var(--border); 
   margin: vars.$space-3 0;
 }
 
@@ -28,7 +29,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
+
+@media (max-width: 768px) {
+  .footer__bottom {
+    flex-direction: column; 
+    gap: vars.$space-2;
+    text-align: center;
+  }
+
+  .footer__nav {
+    flex-direction: column; 
+    gap: vars.$space-2;
+  }
+
+  .footer__social {
+    justify-content: center;
+  }
+}
+
 
 .footer__logo-link {
   display: inline-block;
@@ -46,7 +66,7 @@
 
 .footer__nav-link {
   text-decoration: none;
-  color: var(--ink);
+  color: var(--ink); 
   font-size: fn.fluid(20px, 28px);
   font-weight: 600;
   position: relative;
@@ -59,12 +79,12 @@
     left: 0;
     width: 0%;
     height: fn.to-rem(2);
-    background-color: var(--brand);
+    background-color: var(--brand); 
     transition: width 0.3s ease;
   }
 
   &:hover {
-    color: var(--brand);
+    color: var(--brand); 
   }
 
   &:hover::after {
@@ -78,11 +98,11 @@
 }
 
 .footer__social-link {
-  color: var(--ink);
+  color: var(--ink); 
   font-size: fn.to-rem(28);
   transition: color 0.3s ease;
 
   &:hover {
-    color: var(--brand);
+    color: var(--highlight); 
   }
 }

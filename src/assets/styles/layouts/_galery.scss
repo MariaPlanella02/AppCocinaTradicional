@@ -4,20 +4,25 @@
 @layer base {
   .gallery {
     padding: 2svh; 
-    background-color: color(display-p3 0.9 0.85 0.7); 
+    background-color: var(--paper); 
     text-align: center;
+
+    max-width: 153ch;         
+    margin: 0 auto;          
+    container-type: inline-size;
+    container-name: gallery;
   }
 
   .gallery__title {
     font-size: fn.fluid(28px, 40px);
     margin-bottom: 4svh;
-    color: oklch(60% 0.15 40); 
+    color: var(--brand); 
   }
 
   .gallery__caption {
     font-size: fn.fluid(14px, 18px);
     font-style: italic;
-    color: var(--ink);
+    color: var(--ink); 
   }
 }
 
@@ -27,24 +32,28 @@
     flex-wrap: wrap;
     gap: 2lvw; 
     justify-content: center;
+    margin-top: vars.$space-4;
   }
 
   .gallery__item {
     flex: 1 1 calc(33.333% - 2lvw);
     max-width: calc(33.333% - 2lvw);
-    background: hwb(200 30% 20%); 
+    background: var(--border); 
     border-radius: fn.to-rem(8);
     padding: 1cqmin; 
     transition: transform 0.3s ease;
 
     &:hover {
       transform: scale(1.05);
+      background: var(--accent); 
     }
   }
 
   .gallery__photo {
     width: 100%;
-    height: auto;
+    height: 500px;
+    object-fit: cover;
+    display: block;
     border-radius: fn.to-rem(6);
     margin-bottom: vars.$space-2;
   }
@@ -52,7 +61,7 @@
 
 @layer overrides {
   .gallery__item:has(img:hover) {
-    outline: fn.to-rem(3) solid oklch(70% 0.2 120);
+    outline: fn.to-rem(3) solid var(--accent); 
   }
 
   .gallery__grid :is(.gallery__caption, .gallery__photo) {
@@ -61,12 +70,12 @@
 
   .modal-content {
     border-radius: fn.to-rem(12);
-    background-color: oklch(95% 0.05 80); 
+    background-color: var(--paper); 
   }
 
   .modal-title {
     font-size: fn.fluid(20px, 28px);
-    color: var(--brand);
+    color: var(--brand); 
   }
 
   .modal-body img {

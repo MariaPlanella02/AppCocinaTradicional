@@ -12,24 +12,27 @@
   font-size: fn.fluid(28px, 40px);
   font-weight: 700;
   margin-bottom: vars.$space-4;
+  color: var(--ink); 
 }
 
 .speakers__grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: vars.$space-4;
+  gap: vars.$space-4; 
 }
 
 .speakers__item {
   flex: 1 1 calc(33.333% - vars.$space-4);
   max-width: calc(33.333% - vars.$space-4);
   border-radius: fn.to-rem(8);
-  box-shadow: 0 fn.to-rem(2) fn.to-rem(6) rgba(0,0,0,0.05);
+  background-color: var(--paper);
+  box-shadow: 0 fn.to-rem(2) fn.to-rem(6) var(--border);
   transition: transform 0.3s ease;
 
   &:hover {
     transform: scale(1.03);
+    box-shadow: 0 fn.to-rem(4) fn.to-rem(10) var(--highlight); 
   }
 }
 
@@ -41,5 +44,5 @@
 .speakers__caption {
   font-size: fn.fluid(16px, 20px);
   font-style: italic;
-  color: var(--ink);
+  color: var(--ink); 
 }

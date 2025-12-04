@@ -3,12 +3,13 @@
 
 .header {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto 1fr auto; 
   align-items: center;
   padding: vars.$space-3 fn.to-rem(32);
-  background-color: var(--paper);
+  background-color: var(--transparent);
   border-bottom: fn.to-rem(2) solid var(--border);
-  box-shadow: 0 fn.to-rem(2) fn.to-rem(4) rgba(0,0,0,0.05);
+  box-shadow: 0 fn.to-rem(2) fn.to-rem(4) var(--border);
+  position: relative; 
 }
 
 .header__logo-link {
@@ -16,40 +17,75 @@
 }
 
 .header__logo-image {
-  width: fn.to-rem(120); 
+  width: fn.to-rem(120);
   height: auto;
 }
 
 .header__nav {
   display: flex;
   justify-content: flex-end;
-  gap: vars.$space-3; 
+  gap: vars.$space-3;
+
+  @media (max-width: 768px) {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top: fn.to-rem(70);
+    right: fn.to-rem(32);
+    background: var(--paper);
+    padding: vars.$space-3;
+    box-shadow: 0 fn.to-rem(4) fn.to-rem(8) rgba(0,0,0,0.2);
+    border-radius: fn.to-rem(8);
+    width: fn.to-rem(200);
+    text-align: left;
+  }
+
+  &.is-active {
+    display: flex; 
+  }
 }
 
 .header__nav-link {
   text-decoration: none;
-  font-weight: 600; 
+  font-weight: 600;
   color: var(--ink);
   position: relative;
   font-size: fn.fluid(20px, 28px);
   transition: color 0.3s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: fn.to-rem(-4);
+    left: 0;
+    width: 0%;
+    height: fn.to-rem(2);
+    background-color: var(--cta-vibrant);
+    transition: width 0.3s ease;
+  }
+
+  &:hover {
+    color: var(--cta-vibrant);
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
 }
 
-.header__nav-link::after {
-  content: "";
-  position: absolute;
-  bottom: fn.to-rem(-4);
-  left: 0;
-  width: 0%;
-  height: fn.to-rem(2);
-  background-color: var(--brand);
-  transition: width 0.3s ease;
+.header__toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: fn.to-rem(28);
+  color: var(--ink);
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: block;
+    position: absolute;
+    right: fn.to-rem(16); 
+    top: fn.to-rem(24);   
+  }
 }
 
-.header__nav-link:hover {
-  color: var(--brand);
-}
-
-.header__nav-link:hover::after {
-  width: 100%;
-}
