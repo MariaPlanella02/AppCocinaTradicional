@@ -70,7 +70,7 @@
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: var(--highlight); 
+     background-color: var(--highlight); 
   }
 
   i {
@@ -85,18 +85,18 @@
   }
 
   .hero__title {
-    font-size: fn.fluid(24, 32);
+    font-size: fn.modular-scale(1);
   }
 
   .hero__description {
-    font-size: fn.fluid(17, 21);   // reduce tamaño del texto descriptivo
-    line-height: 1.6;              // más compacto
+    font-size: fn.to-em(15); 
+    line-height: 1.6;
   }
 
   .hero__cta {
-    font-size: fn.fluid(18, 22);   // botón más pequeño
-    padding: vars.$space-2 vars.$space-3; // ajusta el relleno para que no se vea enorme
-    width: 100%;                   // ocupa todo el ancho en móviles
+    font-size: fn.modular-scale(1);   
+    padding: fn.to-em(12); 
+    width: 100%; 
     justify-content: center; 
   }
 
