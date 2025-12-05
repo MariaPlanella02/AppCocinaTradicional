@@ -6,9 +6,8 @@
   padding: vars.$space-3 fn.to-rem(32);
   color: var(--ink); 
   
-  //animacion para canviar las imagenes de fondo
-  animation: heroBackground 20s infinite alternate;
-
+  // animacion para canviar las imagenes de fondo
+  animation: hero-background 20s infinite alternate;
   container-type: inline-size;
   container-name: hero;
 
@@ -22,16 +21,19 @@
   }
 }
 
-@keyframes heroBackground {
+@keyframes hero-background {
   0% {
     background: url("../images/imagebg1.jpg") center/cover no-repeat;
   }
+
   33% {
     background: url("../images/imagebg2.jpg") center/cover no-repeat;
   }
+
   66% {
     background: url("../images/imagebg3.jpg") center/cover no-repeat;
   }
+
   100% {
     background: url("../images/imagebg4.jpg") center/cover no-repeat;
   }
@@ -44,7 +46,7 @@
   padding: 2cqmin;
   color: var(--paper); 
   line-height: 1.2;
-  text-shadow: 0 fn.to-rem(2) fn.to-rem(6) rgba(0, 0, 0, 1);
+  text-shadow: 0 fn.to-rem(2) fn.to-rem(6) rgb(0 0 0 / 100%);
 }
 
 .hero__description {
@@ -53,7 +55,7 @@
   line-height: 1.9; 
   margin-bottom: vars.$space-4;
   color: var(--paper); 
-  text-shadow: 0 fn.to-rem(2) fn.to-rem(6) rgba(0, 0, 0, 1);
+  text-shadow: 0 fn.to-rem(2) fn.to-rem(6) rgb(0 0 0 / 100%);
 }
 
 .hero__cta {
@@ -65,7 +67,6 @@
   gap: vars.$space-2;
   background-color: var(--accent); 
   color: var(--paper); 
-
   transition: background-color 0.3s ease;
 
   &:hover {

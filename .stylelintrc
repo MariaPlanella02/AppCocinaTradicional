@@ -3,7 +3,24 @@
   "plugins": ["stylelint-scss"],
   "rules": {
     "selector-class-pattern": "^[a-z]([a-z0-9-]+)?(__[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?$",
+
     "scss/at-rule-no-unknown": true,
-    "scss/selector-no-redundant-nesting-selector": true
+    "scss/selector-no-redundant-nesting-selector": true,
+    "scss/dollar-variable-pattern": "^([a-z0-9-]+)$",
+    "scss/percent-placeholder-pattern": "^([a-z0-9-]+)$",
+    "scss/load-no-partial-leading-underscore": true,
+    "scss/at-import-partial-extension-disallowed-list": ["scss"],
+    "scss/double-slash-comment-empty-line-before": ["always"],
+    "scss/double-slash-comment-whitespace-inside": "always",
+
+    "color-hex-length": "short",
+    "alpha-value-notation": "percentage",
+    "hue-degree-notation": "angle",
+    "font-weight-notation": "numeric",
+    "max-nesting-depth": 3,
+    "selector-max-id": 0,
+    "declaration-no-important": true,
+    "no-duplicate-selectors": true,
+    "block-no-empty": true
   }
 }

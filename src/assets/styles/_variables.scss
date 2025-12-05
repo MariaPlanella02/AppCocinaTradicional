@@ -1,29 +1,33 @@
 /* ========================= */
+
 /* Paleta de colores cocina tradicional */
+
 /* ========================= */
 
 :root {
-  --brand: oklch(65% 0.18 40);   // Terracota cálido
-  --ink: oklch(25% 0.02 270);    // Gris carbón
-  --paper: oklch(95% 0.02 90);   // Crema suave
-  --border: oklch(75% 0.12 70);  // Madera clara
-  --accent: oklch(55% 0.12 120); // Verde oliva
-  --highlight: oklch(40% 0.15 20); // Rojo vino
+  --brand: oklch(65% 0.18 40deg);   // Terracota cálido
+  --ink: oklch(25% 0.02 270deg);    // Gris carbón
+  --paper: oklch(95% 0.02 90deg);   // Crema suave
+  --border: oklch(75% 0.12 70deg);  // Madera clara
+  --accent: oklch(55% 0.12 120deg); // Verde oliva
+  --highlight: oklch(40% 0.15 20deg); // Rojo vino
   --cta-vibrant: color(display-p3 0.9 0.2 0.3); // rojo vibrante en P3
-  --transparent: transparent; //Transparente
+  --transparent: transparent; // Transparente
 }
 
 /* ========================= */
+
 /* Variables Sass (para cálculos y mixins) */
+
 /* ========================= */
 
 $brand: #D2691E;     // Terracota cálido
-$ink: #333333;       // Gris carbón
+$ink: #333;       // Gris carbón
 $paper: #FAF3E0;     // Crema suave
 $border: #DEB887;    // Madera clara
 $accent: #6B8E23;    // Verde oliva
 $highlight: #8B0000; // Rojo vino
-$transparent: transparent;//Transparente
+$transparent: transparent;// Transparente
 
 $space-1: 0.25rem;
 $space-2: 0.5rem;

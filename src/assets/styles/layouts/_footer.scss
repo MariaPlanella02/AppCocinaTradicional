@@ -32,7 +32,7 @@
   flex-wrap: wrap;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .footer__bottom {
     flex-direction: column; 
     gap: vars.$space-2;

@@ -1,11 +1,15 @@
+@use "sass:math";
+
 // Convierte px a rem
 @function to-rem($px, $base: 16) {
-  @return ($px / $base) * 1rem;
+  @return math.div($px, $base) * 1rem;
 }
 
 // Tipografía fluida con clamp
 @function fluid($min, $max, $minVw: 320, $maxVw: 1280) {
-  $slope: ($max - $min) / ($maxVw - $minVw);
+  $slope: math.div(($max - $min), ($maxVw - $minVw));
   $intercept: $min - $slope * $minVw;
-  @return clamp(#{$min}px, #{$intercept}px + #{$slope}vw, #{$max}px);
+
+  @return clamp(#{$min}px, calc(#{$intercept}px + #{$slope}vw), #{$max}px);
 }
+
