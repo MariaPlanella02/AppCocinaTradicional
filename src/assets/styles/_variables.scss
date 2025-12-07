@@ -1,33 +1,39 @@
 /* ========================= */
 
-/* Paleta de colores cocina tradicional */
+/* Paleta de colores cocina */
 
 /* ========================= */
 
 :root {
-  --brand: oklch(65% 0.18 40deg);   // Terracota cálido
-  --ink: oklch(25% 0.02 270deg);    // Gris carbón
-  --paper: oklch(95% 0.02 90deg);   // Crema suave
-  --border: oklch(75% 0.12 70deg);  // Madera clara
-  --accent: oklch(55% 0.12 120deg); // Verde oliva
-  --highlight: oklch(40% 0.15 20deg); // Rojo vino
-  --cta-vibrant: color(display-p3 0.9 0.2 0.3); // rojo vibrante en P3
-  --transparent: transparent; // Transparente
+  --brand: oklch(65% 0.18 40deg); 
+  --ink: oklch(25% 0.02 270deg);   
+  --paper: oklch(95% 0.02 90deg);   
+  --border: oklch(75% 0.12 70deg);  
+  --accent: oklch(55% 0.12 120deg); 
+  --highlight: oklch(40% 0.15 20deg); 
+  --cta-vibrant: color(display-p3 0.9 0.2 0.3); 
+  --transparent: transparent; 
 }
 
 /* ========================= */
 
-/* Variables Sass (para cálculos y mixins) */
+/* Variables Sass para cálculos y mixins */
 
 /* ========================= */
 
-$brand: #D2691E;     // Terracota cálido
-$ink: #333;       // Gris carbón
-$paper: #FAF3E0;     // Crema suave
-$border: #DEB887;    // Madera clara
-$accent: #6B8E23;    // Verde oliva
-$highlight: #8B0000; // Rojo vino
-$transparent: transparent;// Transparente
+$brand: #D2691E;    
+$ink: #333;   
+$paper: #FAF3E0;  
+$border: #DEB887;   
+$accent: #6B8E23; 
+$highlight: #8B0000;
+$transparent: transparent;
+
+/* ========================= */
+
+/* Espaciados escalados para coherencia del proyecto */
+
+/* ========================= */
 
 $space-1: 0.25rem;
 $space-2: 0.5rem;
